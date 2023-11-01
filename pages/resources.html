@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Deploy your websites in just 60 seconds"
+    />
+    <title>Serenix - Mental Health Resources</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav_brand" href="/index.html"
+          ><img src="/images/logo.svg" alt=""
+        /></a>
+        <svg class="icon icon--white nav_toggler">
+          <use xlink:href="/images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav_list collapsible_content">
+          <li class="nav_item"><a href="/pages/LGBTQ.html">LGBTQ</a></li>
+          <li class="nav_item">
+            <a href="/pages/AcademicStresses.html">Academic Stresses</a>
+          </li>
+          <li class="nav_item">
+            <a href="/pages/HomeStresses.html">Home Stresses</a>
+          </li>
+          <li class="nav_item">
+            <a href="/pages/resources.html">Quiz</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      class="block block--dark block--skewed-right hero"
+      style="margin-bottom: 7rem"
+    >
+      <header class="container">
+        <div class="block_header hero_content" style="text-align: center">
+          <h1
+            class="block_heading"
+            style="margin-bottom: 4rem; margin-top: 5rem"
+            data-aos="zoom-in-right"
+          >
+            Quiz
+          </h1>
+        </div>
+      </header>
+    </section>
+    <div style="text-align: center; margin: 3rem auto">
+      <button
+        onclick="startQuiz()"
+        id="start"
+        class="btn btn--primary btn--stretched"
+      >
+        START
+      </button>
+    </div>
+
+    <div class="container" style="text-align: center; margin: 3rem auto">
+      <div id="questions">
+        <div id="count" style="display: none">
+          Question <span id="count-number">0</span>
+        </div>
+        <div id="quest"></div>
+        <button
+          onclick="answer(1)"
+          style="display: none"
+          class="answerButtons btn btn--outline"
+        >
+          TRUE
+        </button>
+        <button
+          onclick="answer(0)"
+          style="display: none"
+          class="answerButtons btn btn--outline"
+        >
+          FALSE
+        </button>
+        <div class="resource" style="display: none">
+          You scored <span id="percent1"></span> out of 12. Consider using these
+          resources to help you on your journey
+        </div>
+        <div id="message" style="display: none">
+          You scored <span id="percent2"></span> out of 12. Consider using these
+          resources to help you on your journey
+        </div>
+      </div>
+    </div>
+    <div class="resource" style="display: none">
+      <a href="https://www.thetrevorproject.org/get-help/" class="resource-btn"
+        >Trevor Project Lifeline for Suicide - 1-866-488-7386</a
+      >
+    </div>
+    <div class="resource" style="display: none">
+      <a href="https://imi.guide/" class="resource-btn"
+        >imi.guide - A guide for exploring your indentity</a
+      >
+    </div>
+    <div class="resource" style="display: none">
+      <a href="https://www.qchatspace.org/" class="resource-btn"
+        >Q Chat Space - Online discussion and chats</a
+      >
+    </div>
+
+    <div class="resource" style="display: none">
+      <a href="https://calyouth.org/cycl/" class="resource-btn"
+        >Youth Crisis Line - 800-843-5200</a
+      >
+    </div>
+    <div class="resource" style="display: none">
+      <a href="#" class="resource-btn">Suicide Lifeline - 988</a>
+    </div>
+    <div class="resource" style="display: none">
+      <a href="https://www.calhope.org/" class="resource-btn"
+        >CalHOPE line - 833-317-4673</a
+      >
+    </div>
+    <div class="resource" style="display: none">
+      <a href="#" class="resource-btn"
+        >National Domestic Violence Hotline - 800-799-7233</a
+      >
+    </div>
+    <div class="resource" style="display: none">
+      <a
+        href="https://www.cpedv.org/domestic-violence-organizations-california"
+        class="resource-btn"
+        >California Partnership to end Domestic Violence</a
+      >
+    </div>
+    <footer class="block block--dark footer">
+      <div class="container grid footer_sections">
+        <div class="collapsible collapsible_expanded footer_section">
+          <div class="collapsible_header">
+            <h2 class="collapsible_heading block_heading footer_heading">
+              App Challenge
+            </h2>
+            <svg class="icon icon--white collapsible_chevron">
+              <use xlink:href="/images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible_content">
+            <ul class="list">
+              <li class="list__item">
+                <a href="https://www.congressionalappchallenge.us/"
+                  >Congressional App Challenge</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer_brand">
+          <img src="/images/logo.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/quiz.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
